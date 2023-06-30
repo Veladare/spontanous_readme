@@ -1,5 +1,6 @@
-const fs = require('fs')
-const inquirer = require('inquirer')
+const fs = require('fs');
+const inquirer = require('inquirer');
+const generateMarkdown = require("./utils/generateMarkdown")
 
 const questions = [
     {
@@ -23,19 +24,13 @@ const questions = [
     {
         type: "input",
         name: "usage",
-        message:"Give a name for your project"
+        message:"What is the purpose of or what problem does your project solve?"
 
     },
     {
         type: "input",
-        name: "installation",
-        message:"Give a name for your project"
-
-    },
-    {
-        type: "input",
-        name: "credit",
-        message:"give a list contributors"
+        name: "credits",
+        message:"give a list of contributors"
 
     },
     {
@@ -59,11 +54,20 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, generateMarkdown(data), (err) => {
+        if (err) {
+            return console.log(err);
+        }
+    });
+}
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then
+    inquirer.prompt(questions).then((data) => {
+        console.log(JSON.stringify(data, null, " "));
+        data.getLicense = getLicense(data.license);
+        writeToFile("./exampleof/README.md", data);
+    });
 }
 
 // Function call to initialize app
