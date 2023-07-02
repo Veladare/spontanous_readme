@@ -29,7 +29,7 @@ const questions = [
     },
     {
         type: "input",
-        name: "credits",
+        name: "contributors",
         message:"give a list of contributors"
 
     },
@@ -50,7 +50,19 @@ const questions = [
         
 
     },
+    {
+        type: "input",
+        name: 'github',
+        message: 'Enter your GitHub username',
+    
+    },
 
+    {
+        type: "input",
+        name: 'email',
+        message: 'Enter your email',
+    
+    },
 ];
 
 // TODO: Create a function to write README file
