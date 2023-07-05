@@ -34,20 +34,23 @@ const questions = [
 
     },
     {
+        type: 'input',
+        name: 'test',
+        message: 'provide any test information.'
+    },
+    
+    {
         type: "list",
         name: "license",
         message:"Select a License",
         choices: [
             "MIT",
-            "Morzilla",
             "Apache 2.0",
-            "GNU General Public license 3.0",
-            "Boost Software 1.0"
+            "Boost Software 1.0",
+            "None",
 
 
-        ]
-
-        
+        ]  
 
     },
     {
@@ -71,12 +74,13 @@ function writeToFile(fileName, data) {
         if (err) {
             return console.log(err);
         }
+        console.log('File successfully written:', fileName);
     });
 }
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((data) => {
-        writeToFile("./README.md", data);
+        writeToFile("./ExampleREADME.md", data);
     });
 }
 

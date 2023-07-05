@@ -1,32 +1,33 @@
-# 1
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  ## Description
-  
-  1
-  
-  ## Table of Contents (Optional)
+# Spontanous ReadME
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+## Screenshot
 
-## Installation
+<img width="1626" alt="Project_9_SH" src="https://github.com/Veladare/prework-study-guide/assets/126302466/4d0dd1b6-5510-436a-b61d-ab7f5a18fb07">
 
-1
+## Description
+
+The purpose of this project is to create a ReadMe generator to make it easier for users to create a ReadMe by using the terminal.
+
+In completing this project, I learned how to use module export, gained a better understanding of switch cases, how to use inquirer and how to transfer data from one file to another and creating new files via fs.writefile to generate a file from the terminal.  
+## Installation 
+
+To use, install vscode and npm install.
 
 ## Usage
 
-1
+Once installed, start the questionnaire by typing node index.js. After completeting this, a new ReadMe will be generated.
 
-## Contributors
+## Credits
 
-undefined
+N/A
 
-## License 
+## License
 
-MIT
+Please refer to the LICENSE in the repo.
 
-## Questions
+## Test
 
-You can contact me at 1 or to look at my Github repository click https://github.com/1
+Example of Spontanous_README in action
+
+[Spontanous_README_Video](https://github.com/Veladare/prework-study-guide/assets/126302466/2087bb61-b2ff-42ea-befc-a55c37f9abcb)
+
